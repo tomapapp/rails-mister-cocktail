@@ -9,7 +9,7 @@ class DosesController < ApplicationController
     @dose = Dose.new(dose_params)
     @dose.cocktail = @cocktail
     if @dose.save
-      redirect_to @cocktail, notice: 'New ingredient added'
+      redirect_to root, notice: 'New ingredient added'
     else
       render :new
     end
